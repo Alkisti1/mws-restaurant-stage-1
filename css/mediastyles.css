@@ -12,16 +12,18 @@
     #restaurants-list li h1 {
 
     	height: 7%;
+      font-size: 10pt;
     }
 
     #restaurants-list p {
-    visibility: hidden;
     }
 
     .filter-options select {
 
       font-size: 8pt;
       height: 30px;
+      margin: 10px 0 10px;
+
 
     }
 }
@@ -58,14 +60,16 @@
      #restaurants-list li a {
        position: relative;
        left:10%;
+       top: 5px;
        margin: 0px;
        overflow-wrap:break-word;
 
      }
 
      #restaurants-list p {
-     visibility: hidden;
-     line-height: 0;
+     /*line-height: 0;*/
+     position: relative;
+     left:10%;
      }
 
      .filter-options select {
