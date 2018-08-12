@@ -6,11 +6,15 @@ var markers = []
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
+ *Fetch Service Worker
  */
 document.addEventListener('DOMContentLoaded', (event) => {
+
   initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
+  registerServiceWorker();
+
 });
 
 /**
@@ -77,7 +81,7 @@ initMap = () => {
         zoom: 12,
         scrollWheelZoom: false
       });
-  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token=pk.eyJ1IjoiYWxraXN0aTEiLCJhIjoiY2pqbXg4cW00MDM3NzNrcGN5dHo1MmxnbyJ9.lWOSLMvRfX4TlK9wFuGusw', {
     mapboxToken: 'pk.eyJ1IjoiYWxraXN0aTEiLCJhIjoiY2pqbXg4cW00MDM3NzNrcGN5dHo1MmxnbyJ9.lWOSLMvRfX4TlK9wFuGusw',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -189,3 +193,21 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 }
+
+
+/**
+ * Add service Worker https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
+ */
+
+ registerServiceWorker = () => {
+   if ('serviceWorker' in navigator) {
+     navigator.serviceWorker.register('/sw.js')
+     .then(reg => {
+       console.log('Registration worked! The scope is ', reg.scope);
+     }).catch(err => {
+       console.log('Registration failed with ', err);
+     });
+   } else {
+     console.log('No serviceWorker in this browser!');
+   }
+ };
