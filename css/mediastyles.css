@@ -28,7 +28,7 @@
     }
 }
 
-@media screen and (min-width: 800px) and (max-width: 999px) {
+@media screen and (min-width: 880px) and (max-width: 999px) {
     /* STYLES HERE */
 
     .col-6-map {width: 40%;}
@@ -55,11 +55,12 @@
     	overflow-wrap:break-word;
       height:15%;
       position: relative;
-      left:10%;
+      left:8%;
+      font-size: 11pt;
      }
      #restaurants-list li a {
        position: relative;
-       left:10%;
+       left:8%;
        top: 5px
        margin: 0px;
        overflow-wrap:break-word;
@@ -72,12 +73,214 @@
      left:10%;
      }
 
-     .filter-options select {
 
+     .filter-options select {
+       width: 140px;
+       height: 20px;
        font-size: 8pt;
-       height: 30px;
 
      }
+
+     .filter-options h2 {
+         font-size: 9pt;
+
+     }
+
+  }
+
+@media screen and (max-width:470px) {
+
+  .col-6-map {width: 35%;}
+  .col-6-list {width: 65%;}
+  .col-6 {width: 100%;}
+nav {
+  padding-bottom: 5px;
+  height:60px;
+}
+  nav h1 a {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 100;
+    letter-spacing: 8px;
+        line-height: 1;
+        top: 0px;
+
+  }
+
+
+.filter-options select {
+  width: 95px;
+  height: 20px;
+  font-size: 7pt;
+      margin: 5px;
+}
+
+.filter-options h2 {
+    font-size: 9pt;
+
+}
+
+#footer {
+  line-height: 1;
+  padding: 10px;
+  font-size: 8pt;
+}
+  #restaurants-list li {
+
+    height: 280px;
+    width:100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
+  }
+
+  #restaurants-list .restaurant-img {
+    display: block;
+    padding-top: 10px;
+    height: 120px;
+    float: left;
+    margin-bottom: 10px;
+  }
+
+  #restaurants-list li h1 {
+
+    overflow-wrap:break-word;
+    height:15%;
+    position: relative;
+    left:8%;
+    font-size: 9pt;
+    margin-top:130px;
+   }
+
+   #restaurants-list li a {
+     position: relative;
+     left:8%;
+     top: -20px;
+     overflow-wrap:break-word;
+     margin: 15px 6px 3px;
+     font-size: 8pt;
+     padding: 0px 0px 0px;
+
+   }
+
+   #restaurants-list p {
+   position: relative;
+   left:10%;
+   font-size: 9pt;
+   float:left;
+   top: -10px;
+   }
+
+
+#breadcrumb {
+    width: 100%;
+    padding: 0px;
+    height:20px;
+
+}
+#restaurant-container {
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #fff;
+    padding: 100px 10px 30px;
+    width: 50%;
+}
+
+#restaurant-cuisine {
+    letter-spacing: 0px;
+}
+
+#reviews-container h2 {
+    font-size: 12pt;
+}
+#reviews-container {
+      padding: 5px 5px 80px;
+    width: 60%;
+}
+
+#restaurant-address {
+    font-size: 8pt;
+    margin: 8px 0px;
+}
+
+#restaurant-name {
+    font-size: 10pt;
+}
+}
+@media screen and (min-width: 471px) and (max-width: 879px) {
+
+    .col-6-map {width: 25%;}
+    .col-6-list {width: 75%;}
+
+
+    .filter-options {
+        height: 100px;
+    }
+
+    nav {
+    height: 100px;
+}
+    #restaurants-list li {
+
+      height: 150px;
+      width:100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 5px;
+          padding: 0 10px 25px;
+    }
+
+    #restaurants-list .restaurant-img {
+      display: block;
+    	padding-top: 10px;
+      height: 130px;
+      float: left;
+    }
+
+    #restaurants-list li h1 {
+
+    	overflow-wrap:break-word;
+      height:15%;
+      position: relative;
+      left:8%;
+      font-size: 11pt;
+     }
+     #restaurants-list li a {
+       position: relative;
+       left:8%;
+       top: 5px;
+       margin: 0px;
+       overflow-wrap:break-word;
+       padding: 3px 12px 5px;
+
+     }
+
+     #restaurants-list p {
+     /*line-height: 0;*/
+     position: relative;
+     left:8%;
+     font-size: 9pt;
+     }
+
+
+     .filter-options select {
+       width: 140px;
+       height: 20px;
+       font-size: 8pt;
+     }
+
+     .filter-options h2 {
+         font-size: 9pt;
+   }
+
+   #restaurant-name {
+    font-size: 15pt;
+    margin: 60px 0 0px;
+}
+
+#restaurant-cuisine {
+    font-size: 8pt;
+  }
 
      @media screen and (min-width: 2080px)  {
          /* STYLES HERE */
