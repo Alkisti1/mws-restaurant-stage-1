@@ -50,13 +50,15 @@
       float: left;
     }
 
-    #restaurants-list li h1 {
+    #restaurants-list li h2 {
 
     	overflow-wrap:break-word;
       height:15%;
       position: relative;
-      left:8%;
-      font-size: 11pt;
+      left:10%;
+      font-size: 13pt;
+      font-style: strong;
+      margin-bottom: 8px;
      }
      #restaurants-list li a {
        position: relative;
@@ -88,11 +90,21 @@
 
   }
 
-@media screen and (max-width:470px) {
+@media screen and (min-width:358px) and (max-width:470px) {
 
-  .col-6-map {width: 35%;}
-  .col-6-list {width: 65%;}
+  .col-6-map {width: 100%;}
+  .col-6-list {width: 100%;}
   .col-6 {width: 100%;}
+
+  #scroll {
+  	overflow: scroll;
+  	height:59vh;
+  }
+
+  #map {
+    height:20vh;
+  }
+
 nav {
   padding-bottom: 5px;
   height:60px;
@@ -127,7 +139,7 @@ nav {
 }
   #restaurants-list li {
 
-    height: 280px;
+    height: 150px;
     width:100%;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -138,40 +150,35 @@ nav {
   #restaurants-list .restaurant-img {
     display: block;
     padding-top: 10px;
-    height: 120px;
+    padding-bottom: 10px;
+    height: 140px;
     float: left;
     margin-bottom: 10px;
   }
 
-  #restaurants-list li h1 {
+  #restaurants-list li h2 {
 
     overflow-wrap:break-word;
-    height:15%;
     position: relative;
     left:8%;
-    font-size: 9pt;
-    margin-top:130px;
+    font-size: 12pt;
+    margin-top:15px;
+    font-weight: bold;
    }
 
    #restaurants-list li a {
      position: relative;
      left:8%;
-     top: -20px;
      overflow-wrap:break-word;
      margin: 15px 6px 3px;
      font-size: 8pt;
-     padding: 0px 0px 0px;
-
    }
 
    #restaurants-list p {
    position: relative;
-   left:10%;
+   left:8%;
    font-size: 9pt;
-   float:left;
-   top: -10px;
    }
-
 
 #breadcrumb {
     width: 100%;
@@ -206,6 +213,154 @@ nav {
 #restaurant-name {
     font-size: 10pt;
 }
+
+/*Reviews page */
+
+#restaurant-name {
+ font-size: 15pt;
+ margin: 100px 0 0px;
+}
+
+.inside #map-container {
+    height: 20vh;
+    width: 100%;
+}
+#breadcrumb {
+  padding: 0px;
+}
+
+#restaurant-container, #reviews-container {
+    border-top: 5vh solid #fff;
+    width: 100%
+}
+#restaurant-cuisine {
+    font-size: 8pt;
+  }
+
+  #reviews-list li {
+    position: inherit;
+  }
+
+  .inside #footer {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 357px) {
+
+.col-6-map {width: 100%;}
+.col-6-list {width: 100%;}
+.col-6 {width: 100%;}
+
+#scroll {
+  overflow: scroll;
+  height:59vh;
+}
+
+#map {
+  height: 20vh;
+
+}
+
+nav {
+  padding-bottom: 5px;
+  height:60px;
+}
+  nav h1 a {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 100;
+    letter-spacing: 8px;
+        line-height: 1;
+        top: 0px;
+
+  }
+
+.filter-options select {
+  width: 95px;
+  height: 20px;
+  font-size: 7pt;
+      margin: 5px;
+}
+
+.filter-options h2 {
+    font-size: 9pt;
+
+}
+
+#footer {
+  line-height: 1;
+  padding: 10px;
+  font-size: 8pt;
+}
+
+#restaurants-list li {
+  height: 220px;
+  width:100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+#restaurants-list .restaurant-img {
+    display: block;
+    margin: 0;
+    padding-top: 10px;
+    max-width: 100%;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#restaurants-list li h2 {
+
+  overflow-wrap:break-word;
+  font-size: 9pt;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ #restaurants-list p {
+   font-size: 7pt;
+ }
+
+ #restaurants-list li a {
+   font-size: 8pt;
+ }
+
+ /*Reviews page */
+
+ #restaurant-name {
+  font-size: 15pt;
+  margin: 60px 0 0px;
+}
+
+ .inside #map-container {
+     height: 20vh;
+     width: 100%;
+ }
+ #breadcrumb {
+   padding: 0px;
+ }
+
+ #restaurant-container, #reviews-container {
+     border-top: 5vh solid #fff;
+     width: 100%
+ }
+ #restaurant-cuisine {
+     font-size: 8pt;
+   }
+
+   #reviews-list li {
+     position: inherit;
+   }
+
+   .inside #footer {
+     width: 100%;
+ }
+
 }
 @media screen and (min-width: 471px) and (max-width: 879px) {
 
@@ -237,28 +392,31 @@ nav {
       float: left;
     }
 
-    #restaurants-list li h1 {
+    #restaurants-list li h2 {
 
     	overflow-wrap:break-word;
       height:15%;
       position: relative;
-      left:8%;
-      font-size: 11pt;
+      left:6%;
+      font-size: 8pt;
+      font-weight: bold;
+      padding-top: 10px;
+      padding-bottom: 20px;
      }
+
      #restaurants-list li a {
        position: relative;
-       left:8%;
+       left:6%;
        top: 5px;
        margin: 0px;
        overflow-wrap:break-word;
        padding: 3px 12px 5px;
-
      }
 
      #restaurants-list p {
      /*line-height: 0;*/
      position: relative;
-     left:8%;
+     left:6%;
      font-size: 9pt;
      }
 
@@ -273,14 +431,37 @@ nav {
          font-size: 9pt;
    }
 
+   /*Reviews page */
+
    #restaurant-name {
     font-size: 15pt;
     margin: 60px 0 0px;
 }
 
+.inside #map-container {
+    height: 20vh;
+    width: 100%;
+}
+#breadcrumb {
+  padding: 0px;
+}
+
+#restaurant-container, #reviews-container {
+    border-top: 5vh solid #fff;
+    width: 100%
+}
 #restaurant-cuisine {
     font-size: 8pt;
   }
+
+  #reviews-list li {
+    position: inherit;
+  }
+
+  .inside #footer {
+    width: 100%;
+}
+}
 
      @media screen and (min-width: 2080px)  {
          /* STYLES HERE */
